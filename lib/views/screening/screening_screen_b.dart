@@ -283,54 +283,6 @@ class _ScreeningScreenBState extends State<ScreeningScreenB> {
                     }
                   },
                 ),
-                // Question B9
-                BlocBuilder<ScreeningBloc, ScreeningState>(
-                  builder: (context, state) {
-                    if (state is LoadedB) {
-                      return QuestionComponent(
-                        question: state.questionB[8].question,
-                        description: state.questionB[8].description,
-                        name: state.questionB[8].id.toString(),
-                        score: state.questionB[8].score,
-                        isYes: state.questionB[8].isYes,
-                        answer: state.questionB[8].answer,
-                        validator: validator.requiredInteger,
-                        onChanged: (value) {
-                          context
-                              .read<ScreeningBloc>()
-                              .add(SetAnswer(8, value!, 'B'));
-                          answerB[8] = value;
-                        },
-                      );
-                    } else {
-                      return const SizedBox();
-                    }
-                  },
-                ),
-                // Question B10
-                BlocBuilder<ScreeningBloc, ScreeningState>(
-                  builder: (context, state) {
-                    if (state is LoadedB) {
-                      return QuestionComponent(
-                        question: state.questionB[9].question,
-                        description: state.questionB[9].description,
-                        name: state.questionB[9].id.toString(),
-                        score: state.questionB[9].score,
-                        isYes: state.questionB[9].isYes,
-                        answer: state.questionB[9].answer,
-                        validator: validator.requiredInteger,
-                        onChanged: (value) {
-                          context
-                              .read<ScreeningBloc>()
-                              .add(SetAnswer(9, value!, 'B'));
-                          answerB[9] = value;
-                        },
-                      );
-                    } else {
-                      return const SizedBox();
-                    }
-                  },
-                ),
                 const SizedBox(height: 16),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(

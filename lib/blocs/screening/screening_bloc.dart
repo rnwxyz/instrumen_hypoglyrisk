@@ -119,16 +119,6 @@ class ScreeningBloc extends Bloc<ScreeningEvent, ScreeningState> {
       QuestionModel(
         id: 5,
         question:
-            'Apakah pasien sedang menggunakan obat lain yang berisiko menimbulkan hipoglikemia?',
-        score: 2,
-        isYes: true,
-        description:
-            'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apa saja obat-obat rutin yang bapak ibu sedang gunakan dirumah?\nb)	Apakah bapak/ibu menggunakan obat diluar yang diresepkan dokter?\nc)	Apa saja obat bebas/bebas terbatas yang bapak/ibu biasa gunakan apabila mengalami kondisi seperti nyeri, radang, batuk, pilek, alergi, atau kondisi lain yang membutuhkan obat tanpa resep dokter? Tanyakan obat bebas/bebas terbatas termasuk supplement dan herbal.\nd)	Apakah bapak ibu menyimpan obat-obatan di rumah selain yang diresepkan oleh dokter? Jika iya sebutkan dan catat.',
-        answer: null,
-      ),
-      QuestionModel(
-        id: 6,
-        question:
             'Apakah pasien memiliki persepsi bahwa harus menggunakan obat lain/alternatif selain obat yang diresepkan oleh dokter?',
         score: 3,
         isYes: true,
@@ -137,7 +127,7 @@ class ScreeningBloc extends Bloc<ScreeningEvent, ScreeningState> {
         answer: null,
       ),
       QuestionModel(
-        id: 7,
+        id: 6,
         question:
             'Apakah pasien/keluarga pasien membuat catatan jenis/item obat antidiabetes yang dibawa pulang?',
         score: 2,
@@ -147,17 +137,7 @@ class ScreeningBloc extends Bloc<ScreeningEvent, ScreeningState> {
         answer: null,
       ),
       QuestionModel(
-        id: 8,
-        question:
-            'Apakah pasien/keluarga pasien mengetahui jika penggunaan obat antidiabetes golongan insulin kerja cepat dan sulfonilurea tersebut dapat disesuaikan dosis dan frekuensinya sesuai pola makan? (misalnya saat puasa)',
-        score: 2,
-        isYes: false,
-        description:
-            'Pertanyaan ini hanya diassessment untuk pasien yang pulang dengan insulin kerja cepat dan atau sulfonilurea. Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apakah bapak ibu memiliki kebiasaan puasa? Misal puasa Rhamadan, diet khusus seperti intermitten fasting, puasa senin kamis, atau puasa spiritual lainnya?\nb)	Apakah bapak/ibu mengetahui bahwa obat antidiabetes golongan insulin kerja cepat dan sulfonilurea tidak perlu digunakan apabila tidak akan makan makanan besar?\nc)	Apakah bapak/ibu mengetahui jika akan menjalankan puasa regimen pengobatan dapat diubah?',
-        answer: null,
-      ),
-      QuestionModel(
-        id: 9,
+        id: 7,
         question:
             'Apakah pasien mengetahui jika obat golongan insulin dan sulfonilurea harus dihentikan sementara jika terjadi hipoglikemia berulang?',
         score: 3,
@@ -167,7 +147,7 @@ class ScreeningBloc extends Bloc<ScreeningEvent, ScreeningState> {
         answer: null,
       ),
       QuestionModel(
-        id: 10,
+        id: 8,
         question:
             'Apakah pasien/keluarga pasien mengetahui kemana harus melapor atau menindaklanjuti apabila terjadi keadaan hipoglikemia berat?',
         score: 2,

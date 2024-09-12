@@ -210,19 +210,19 @@ class _ResultScreenBState extends State<ResultScreenB> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: state.history.scoreB < 8
+                                color: state.history.scoreB < 7
                                     ? Colors.green
-                                    : (state.history.scoreB > 7 &&
-                                            state.history.scoreB < 15
+                                    : (state.history.scoreB > 6 &&
+                                            state.history.scoreB < 12
                                         ? Colors.orange
                                         : Colors.red),
                               ),
                               padding: const EdgeInsets.all(8),
                               child: Text(
-                                state.history.scoreB < 8
+                                state.history.scoreB < 7
                                     ? 'Low Risk'
-                                    : (state.history.scoreB > 7 &&
-                                            state.history.scoreB < 15
+                                    : (state.history.scoreB > 6 &&
+                                            state.history.scoreB < 12
                                         ? 'Moderate Risk'
                                         : 'High Risk'),
                                 style: const TextStyle(

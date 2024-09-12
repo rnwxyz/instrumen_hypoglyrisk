@@ -187,7 +187,7 @@ class ManualBookScreen extends StatelessWidget {
                 textAlign: TextAlign.justify,
               ),
               Text(
-                '5.	Apakah pasien sedang menggunakan obat lain yang berisiko menimbulkan hipoglikemia?',
+                '5.	Apakah pasien memiliki persepsi bahwa harus menggunakan obat lain/alternatif selain obat yang diresepkan oleh dokter?',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.black,
@@ -195,7 +195,76 @@ class ManualBookScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apa saja obat-obat rutin yang bapak ibu sedang gunakan dirumah?\nb)	Apakah bapak/ibu menggunakan obat diluar yang diresepkan dokter?\nc)	Apa saja obat bebas/bebas terbatas yang bapak/ibu biasa gunakan apabila mengalami kondisi seperti nyeri, radang, batuk, pilek, alergi, atau kondisi lain yang membutuhkan obat tanpa resep dokter? Tanyakan obat bebas/bebas terbatas termasuk supplement dan herbal.\nd)	Apakah bapak ibu menyimpan obat-obatan di rumah selain yang diresepkan oleh dokter? Jika iya sebutkan dan catat.',
+                'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apakah bapak/ibu pernah menggunakan obat herbal? “Jika iya lanjutkan ke pertanyaan b”\nb)	Bagaimana menurut bapak/ibu khasiat obat herbal terhadap kesehatan?\nc)	Bagaimana cara bapak/ibu menggunakan obat herbal tersebut? (dosis, frekuensi, interval, dengan makanan, sebelum/sesudah makan).\nd)	Apakah bapak/ibu pernah menghentikan obat diabetes/gula dari dokter dan hanya menggunakan obat herbal saja?\ne)	Dari mana informasi yang bapak/ibu dapatkan terkait obat herbal tersebut?\n',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors
+                      .black, // Perlu ditambahkan karena TextSpan tidak memiliki default color
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              Text(
+                'IV. Dimensi Meninjau Terapi Obat Antidiabetes\n',
+                style: TextStyle(
+                  fontSize: 17,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              Text(
+                '6.	Apakah pasien/keluarga pasien membuat catatan jenis/item obat antidiabetes yang dibawa pulang?',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apakah bapak/ibu dapat mengingat semua jenis obat yang digunakan?\nb)	Apakah bapak/ibu pernah lupa dengan jenis obat yang akan digunakan?\nc)	Apakah bapak/ibu pernah lupa minum obat? Jika iya, ceritakan kronologinya!\nd)	Apa yang bapak/ibu lakukan apabila lupa minum obat? Apakah melewati dosis tersebut atau langsung minum diwaktu saat ingat minum obat?\ne)	Apakah bapak/ibu pernah membuat catatan jenis/item obat antidiabetes yang digunakan sehari-hari dirumah?\n',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors
+                      .black, // Perlu ditambahkan karena TextSpan tidak memiliki default color
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              Text(
+                'V. Dimensi Menghentikan Terapi Obat Antidiabetes\n',
+                style: TextStyle(
+                  fontSize: 17,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              Text(
+                '7.	Apakah pasien mengetahui jika obat golongan insulin dan sulfonilurea harus dihentikan sementara jika terjadi hipoglikemia berulang?',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apakah bapak/ibu pernah merasakan gejala hipoglikemia sesaat setelah menggunakan obat golongan insulin dan atau sulfonilurea?\nb)	Apakah bapak/ibu mengetahui jika bapak/ibu dapat menghentikan obat golongan insulin dan atau sulfonilurea jika mengalami gejala hipoglikemia berulang?\n',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors
+                      .black, // Perlu ditambahkan karena TextSpan tidak memiliki default color
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              Text(
+                '8.	Apakah pasien/keluarga pasien mengetahui kemana harus melapor atau menindaklanjuti apabila terjadi keadaan hipoglikemia berat?',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Untuk mengassessment pertanyaan ini apoteker harus mengajukan pertanyaan kepada pasien hal-hal berikut:\na)	Apakah bapak/ibu pernah mengalami kejadian hipoglikemia berat hingga harus dirawat di RS?\nb)	Apakah terdapat tindakan yang ditempuh sebelum terjadinya kejadian hipoglikemia berat tersebut?\nc)	Apakah bapak/ibu memiliki no telepon pertolongan darurat (seperti ambulance, UGD, dokter, perawat, apoteker) dan rumah sakit tujuan terdekat dari tempat tinggal ketika menghadapi tanda dan gejala hipoglikemia berat?\n',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors

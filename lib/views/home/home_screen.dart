@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               // logo
               Padding(
-                padding: EdgeInsets.only(top: 120),
+                padding: EdgeInsets.only(top: 100),
                 child: Image(
                   image: AssetImage('assets/logo.png'),
                   width: 200,
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
               MenuComponent(
                 navigateTo: ManualBookScreen(),
                 icon: Icons.menu_book_rounded,
-                title: 'Riwayat',
+                title: 'Panduan',
               ),
             ],
           ),
