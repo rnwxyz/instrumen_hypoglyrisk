@@ -51,10 +51,10 @@ Future<void> requestStoragePermission() async {
   }
 
   if (status.isGranted) {
-    print("Izin penyimpanan diberikan!");
+    // print("Izin penyimpanan diberikan!");
   } else if (status.isPermanentlyDenied) {
-    print(
-        "Izin penyimpanan ditolak secara permanen. Buka pengaturan untuk mengubahnya.");
+    // print(
+    // "Izin penyimpanan ditolak secara permanen. Buka pengaturan untuk mengubahnya.");
     // Membuka pengaturan aplikasi
     openAppSettings();
   }
