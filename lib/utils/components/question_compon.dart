@@ -27,13 +27,13 @@ class QuestionComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: MyColor.secondary.withOpacity(0.1)),
+        border: Border.all(color: MyColor.secondary.withValues(alpha: 0.1)),
         borderRadius: BorderRadius.circular(5),
-        color: MyColor.secondary.withOpacity(0.1),
+        color: MyColor.secondary.withValues(alpha: 0.1),
       ),
       margin: const EdgeInsets.only(bottom: 15),
       child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
