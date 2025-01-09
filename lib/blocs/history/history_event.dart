@@ -32,3 +32,5 @@ class DeleteHistory extends HistoryEvent {
 }
 
 class DeleteAllHistory extends HistoryEvent {}
+
+class ExportHistory extends HistoryEvent {}

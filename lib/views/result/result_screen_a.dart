@@ -207,7 +207,6 @@ class _ResultScreenAState extends State<ResultScreenA> {
                                 ],
                               ),
                             ),
-                            const SizedBox(width: 20),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
@@ -228,7 +227,7 @@ class _ResultScreenAState extends State<ResultScreenA> {
                                         : 'High Risk'),
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
