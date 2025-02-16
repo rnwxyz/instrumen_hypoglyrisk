@@ -47,6 +47,7 @@ dependencies:
   path_provider: ^2.1.5
   permission_handler: ^11.3.1
   open_file: ^3.5.10
+  flutter_pdfview: ^1.4.0
 
 # Splash Screen
 flutter_native_splash:
@@ -90,6 +91,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logo.png
+    - assets/sop.pdf
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

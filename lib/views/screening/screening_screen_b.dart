@@ -295,10 +295,22 @@ class _ScreeningScreenBState extends State<ScreeningScreenB> {
                   ),
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      var answerTemp = answerB;
                       int totalB = answerB.reduce((a, b) => a + b);
-                      context
-                          .read<HistoryBloc>()
-                          .add(EditScoreB(historyData.id!, totalB));
+                      context.read<HistoryBloc>().add(
+                            EditScoreB(
+                              historyData.id!,
+                              totalB,
+                              answerTemp[0],
+                              answerTemp[1],
+                              answerTemp[2],
+                              answerTemp[3],
+                              answerTemp[4],
+                              answerTemp[5],
+                              answerTemp[6],
+                              answerTemp[7],
+                            ),
+                          );
                       context.read<ScreeningBloc>().add(ResetAnswerB());
                       Navigator.pushReplacement(
                         context,

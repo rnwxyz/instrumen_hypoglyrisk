@@ -353,10 +353,26 @@ class _ScreeningScreenAState extends State<ScreeningScreenA> {
                               rm: rmController.text,
                               apoteker: apotekerController.text,
                               date: DateTime.now(),
+                              scoreA1: state.questionA[0].answer ?? 0,
+                              scoreA2: state.questionA[1].answer ?? 0,
+                              scoreA3: state.questionA[2].answer ?? 0,
+                              scoreA4: state.questionA[3].answer ?? 0,
+                              scoreA5: state.questionA[4].answer ?? 0,
+                              scoreA6: state.questionA[5].answer ?? 0,
+                              scoreA7: state.questionA[6].answer ?? 0,
+                              scoreA8: state.questionA[7].answer ?? 0,
                               scoreA: state.questionA
                                   .map((e) => e.answer!)
                                   .reduce((value, element) => value + element),
                               scoreB: 0,
+                              scoreB1: 0,
+                              scoreB2: 0,
+                              scoreB3: 0,
+                              scoreB4: 0,
+                              scoreB5: 0,
+                              scoreB6: 0,
+                              scoreB7: 0,
+                              scoreB8: 0,
                             );
                             context
                                 .read<HistoryBloc>()

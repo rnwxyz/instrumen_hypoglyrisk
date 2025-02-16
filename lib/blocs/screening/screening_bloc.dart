@@ -67,7 +67,7 @@ class ScreeningBloc extends Bloc<ScreeningEvent, ScreeningState> {
       ),
       QuestionModel(
         id: 8,
-        question: 'Durasi diabetes > 5 tahun ',
+        question: 'Durasi diabetes > 5 tahun',
         score: 4,
         isYes: true,
         description: '',

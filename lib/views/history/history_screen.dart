@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:instrumen_hypoglyrisk/blocs/history/history_bloc.dart';
 import 'package:instrumen_hypoglyrisk/utils/constant/my_color.dart';
+import 'package:instrumen_hypoglyrisk/views/history/history_detail_screen.dart';
 import 'package:intl/intl.dart';
 
 class HistoryScreen extends StatefulWidget {
@@ -102,61 +103,15 @@ class HistoryScreenState extends State<HistoryScreen> {
                     final history = state.histories[index];
                     return GestureDetector(
                       onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              title: const Center(
-                                child: Text('Detail Pemeriksaan',
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ),
-                              content: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Divider(color: MyColor.primary),
-                                  Text(
-                                    'Nama : ${history.name}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'Usia : ${history.age} Tahun',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'Jenis Kelamin : ${history.gender}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'No RM : ${history.rm}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'Skor A : ${history.scoreA}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'Skor B : ${history.scoreB}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    'Tanggal : ${DateFormat('dd-MM-yyyy').format(history.date!)}',
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return HitoryDetailScreen(
+                                model: history,
+                              );
+                            },
+                          ),
                         );
                       },
                       child: Card(

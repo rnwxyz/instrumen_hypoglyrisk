@@ -4,6 +4,7 @@ import 'package:instrumen_hypoglyrisk/utils/constant/my_color.dart';
 import 'package:instrumen_hypoglyrisk/views/history/history_screen.dart';
 import 'package:instrumen_hypoglyrisk/views/manual_book_screen.dart';
 import 'package:instrumen_hypoglyrisk/views/screening/screening_screen_a.dart';
+import 'package:instrumen_hypoglyrisk/views/sop_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -50,10 +51,21 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               SizedBox(height: 40),
-              MenuComponent(
-                navigateTo: ManualBookScreen(),
-                icon: Icons.menu_book_rounded,
-                title: 'Panduan',
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MenuComponent(
+                    navigateTo: ManualBookScreen(),
+                    icon: Icons.menu_book_rounded,
+                    title: 'Panduan',
+                  ),
+                  SizedBox(width: 50),
+                  MenuComponent(
+                    navigateTo: SOPScreen(),
+                    icon: Icons.settings_suggest_sharp,
+                    title: 'SOP',
+                  ),
+                ],
               ),
             ],
           ),
