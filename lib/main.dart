@@ -1,10 +1,15 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:instrumen_hypoglyrisk/blocs/history/history_bloc.dart';
 import 'package:instrumen_hypoglyrisk/blocs/screening/screening_bloc.dart';
+import 'package:instrumen_hypoglyrisk/utils/constant/global_variabel.dart';
 import 'package:instrumen_hypoglyrisk/views/home/home_screen.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 void main() async {
@@ -17,6 +22,14 @@ void main() async {
   await initializeDateFormatting('id_ID', null).then(
     (_) => runApp(const MyApp()),
   );
+
+  final data = await rootBundle.load('assets/sop.pdf');
+  final bytes = data.buffer.asUint8List();
+  final dir = await getApplicationDocumentsDirectory();
+  final file = File('${dir.path}/sop.pdf');
+  await file.writeAsBytes(bytes, flush: true);
+
+  GlobalVariabel.sopPathFilePdf = file.path;
 }
 
 class MyApp extends StatelessWidget {
@@ -56,6 +69,6 @@ Future<void> requestStoragePermission() async {
     // print(
     // "Izin penyimpanan ditolak secara permanen. Buka pengaturan untuk mengubahnya.");
     // Membuka pengaturan aplikasi
-    openAppSettings();
+    await openAppSettings();
   }
 }

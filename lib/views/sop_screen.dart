@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:instrumen_hypoglyrisk/utils/constant/global_variabel.dart';
 import 'package:instrumen_hypoglyrisk/utils/constant/my_color.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
@@ -16,24 +16,14 @@ class SOPScreen extends StatefulWidget {
 }
 
 class _SOPScreenState extends State<SOPScreen> {
-  String? pdfPath;
+  String? pdfPath = GlobalVariabel.sopPathFilePdf;
   int currentPage = 1;
-  int totalPages = 0;
+  int totalPages = GlobalVariabel.totalSOPPage;
   PDFViewController? pdfViewController;
 
   @override
   void initState() {
     super.initState();
-    loadPDF();
-  }
-
-  Future<void> loadPDF() async {
-    final file = await copyAssetToLocal('assets/sop.pdf');
-    setState(
-      () {
-        pdfPath = file.path;
-      },
-    );
   }
 
   Future<void> downloadPDF() async {
@@ -57,16 +47,6 @@ class _SOPScreenState extends State<SOPScreen> {
         const SnackBar(content: Text("Izin penyimpanan ditolak!")),
       );
     }
-  }
-
-  Future<File> copyAssetToLocal(String assetPath) async {
-    final data = await rootBundle.load(assetPath);
-    final bytes = data.buffer.asUint8List();
-    final dir = await getApplicationDocumentsDirectory();
-    final file = File('${dir.path}/sop.pdf');
-
-    await file.writeAsBytes(bytes, flush: true);
-    return file;
   }
 
   @override

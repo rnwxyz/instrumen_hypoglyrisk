@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:instrumen_hypoglyrisk/blocs/history/history_bloc.dart';
 import 'package:instrumen_hypoglyrisk/models/history_model.dart';
 import 'package:instrumen_hypoglyrisk/models/screening_model.dart';
 import 'package:instrumen_hypoglyrisk/utils/components/text_row_component.dart';
